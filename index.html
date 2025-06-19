@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <meta http-equiv="refresh" content="0; url=https://www.exposar.net">
-    <title>Redirecting to www.exposar.net</title>
-    <!-- Optional: Instant redirect without flash -->
-    <script>window.location.replace("https://www.exposar.net");</script>
-</head>
+<script>
+  // Force redirect regardless of MIME type
+  const targetUrl = "https://www.exposar.net";
+  if (!window.location.href.startsWith(targetUrl)) {
+    window.location.href = targetUrl;
+  }
+</script>
+<title>Redirecting...</title>
 <body>
-    <p>If you are not redirected, <a href="https://www.exposar.net">click here</a>.</p>
+  <p>If not redirected, <a href="https://www.exposar.net">click here</a>.</p>
 </body>
-</html>
