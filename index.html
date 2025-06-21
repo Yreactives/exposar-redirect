@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <script>
-  // 1. Immediate redirect (works even if MIME type is wrong)
-  window.location.href = "https://www.exposar.net";
-
-  // 2. Fallback for browsers that block JS
-  setTimeout(function() {
-    document.body.innerHTML = '<p>Redirecting... <a href="https://www.exposar.net">Click here</a> if not redirected.</p>';
-  }, 100);
+  // Capture full path and redirect
+  const path = window.location.pathname;
+  window.location.replace(`https://www.exposar.net${path}`);
 </script>
-<title>Redirecting to www.exposar.net</title>
-<body></body>
+<title>Redirecting...</title>
+<body>
+  <noscript>
+    <meta http-equiv="refresh" content="0; url=https://www.exposar.net">
+    <a href="https://www.exposar.net">Click here to continue</a>
+  </noscript>
+</body>
